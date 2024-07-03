@@ -1,3 +1,14 @@
 patch:
-    schema_list:
+  switcher/hotkeys:
+    - "Control+grave"
+    - "Control+Shift+grave"
+  key_binder/bindings:
+    - {accept: "Control+Shift+space", toggle: ascii_mode, when: always}
+  ascii_composer/switch_key:
+    Caps_Lock: noop
+    Control_L: noop
+    Control_R: noop
+    Shift_L: noop
+    Shift_R: noop
+  schema_list:
     - schema: flypy
