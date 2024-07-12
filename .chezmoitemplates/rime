@@ -12,3 +12,4 @@ patch:
     Shift_R: noop
   schema_list:
     - schema: flypy
+    - schema: flypydz
