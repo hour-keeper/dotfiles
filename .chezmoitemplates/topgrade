@@ -9,7 +9,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["emacs", "vim", "containers", "winget"]
+disable = ["emacs", "vim", "containers", "pip3", "winget"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -114,7 +114,7 @@ repos = [
 [python]
 #enable_pip_review = true                         ###disabled by default
 #enable_pip_review_local = true                   ###disabled by default
-#enable_pipupgrade = true                         ###disabled by default
+enable_pipupgrade = true                         ###disabled by default
 #pipupgrade_arguments = "-y -u --pip-path pip"    ###disabled by default
 
 [windows]
