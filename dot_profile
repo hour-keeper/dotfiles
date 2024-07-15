@@ -22,4 +22,4 @@ export GLFW_IM_MODULE=ibus
 export TERMINAL=foot
 export EDITOR='emacs -nw'
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export DOCKER_CONTEXT=rancher-desktop
+export DOCKER_HOST="unix://$HOME/.config/colima/default/docker.sock"
