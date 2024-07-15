@@ -1,11 +1,10 @@
 [Unit]
 Description=Container runtimes on macOS (and Linux) with minimal setup
 Documentation=https://github.com/abiosofjt/colima
-BindsTo=sway-session.target
 
 [Service]
 Type=simple
 ExecStart=/usr/bin/colima start --cpu 14 --memory 4 --disk 10 --foreground
 
 [Install]
-WantedBy=sway-session.target
+WantedBy=default.target
