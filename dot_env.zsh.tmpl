@@ -41,7 +41,6 @@ rga-fzf() {
 	xdg-open "$file"
 }
 {{ if eq .chezmoi.os "linux"}}
-export PATH=$PATH:$HOME/.rd/bin
 eval "$(register-python-argcomplete --shell zsh pipx)"
 alias mv='advmv -g'
 alias cp='advcp -g'
