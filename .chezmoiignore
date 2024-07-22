@@ -13,6 +13,7 @@ AppData
 .zshenv
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
+rime
 {{ else }}
 !.config/topgrade.toml
 {{ end }}

@@ -4,6 +4,7 @@ patch:
     - "Control+Shift+grave"
   key_binder/bindings:
     - {accept: "Control+Shift+space", toggle: ascii_mode, when: always}
+    - {accept: comma, send: 2, when: has_menu} #逗号次选
   ascii_composer/switch_key:
     Caps_Lock: noop
     Control_L: noop
