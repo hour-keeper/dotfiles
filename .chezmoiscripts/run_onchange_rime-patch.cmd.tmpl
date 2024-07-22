@@ -1,5 +1,6 @@
 {{ if eq .chezmoi.os "windows" }}
 @echo off
+rem rime hash: {{ include "rime" | sha256sum }}
 set "CHEZMOI_SOURCE_DIR=%CHEZMOI_SOURCE_DIR:\=/%"
 copy "%CHEZMOI_SOURCE_DIR%\.chezmoitemplates\rime" "%APPDATA%\Rime\default.custom.yaml"
 exit /b 0
