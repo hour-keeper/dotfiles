@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.os "windows" }}
+@echo off
+set "CHEZMOI_SOURCE_DIR=%CHEZMOI_SOURCE_DIR:\=/%"
+copy "%CHEZMOI_SOURCE_DIR%\.chezmoitemplates\rime" "%APPDATA%\Rime\default.custom.yaml"
+exit /b 0
+{{ end }}
