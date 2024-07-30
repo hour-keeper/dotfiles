@@ -81,7 +81,6 @@ repos = [
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 #"Custom command using interactive shell (unix)" = "-i vim_upgrade"
-"Update GEO" = "curl -H 'Authorization: Bearer {{ .yacd }}' 'http://localhost:9090/configs/geo' -X POST"
 {{ if ne .chezmoi.os "android" }}"Watchtower" = "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower -c  --run-once"{{ end }}
 {{ if eq .chezmoi.os "windows" }}"MSYS2" = "C:/msys64/usr/bin/bash -lc 'pacman -Syu && etc-update'"{{ end }}
 
