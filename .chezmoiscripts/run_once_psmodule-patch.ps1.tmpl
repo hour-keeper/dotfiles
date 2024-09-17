@@ -1,0 +1,19 @@
+{{ if eq .chezmoi.os "windows" }}
+function Test-IsAdmin {
+  return (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+}
+
+if ((Test-IsAdmin) -eq $false) {
+ Write-Warning "This script requires local admin privileges. Elevating..."
+ gsudo "& '$($MyInvocation.MyCommand.Source)'" $args
+ if ($LastExitCode -eq 999 ) {
+    Write-error 'Failed to elevate.'
+ }
+ return
+}
+
+# You are elevated here. Do admin stuff.
+Install-Module -Name PSWindowsUpdate -Force -Scope AllUsers
+Install-Module -Name Microsoft.WinGet.Client -Force -Scope AllUsers
+Install-Module -Name Microsoft.WinGet.CommandNotFound -Force -Scope AllUsers
+{{ end }}

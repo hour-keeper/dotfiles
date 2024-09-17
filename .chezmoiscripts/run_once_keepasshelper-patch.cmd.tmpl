@@ -1,0 +1,14 @@
+{{ if eq .chezmoi.os "windows" }}
+@echo off
+gsudo status IsElevated --no-output && goto :IsElevated
+
+echo Admin rights needed. Elevating using gsudo.
+gsudo "%~f0" %*
+if errorlevel 999 Echo Failed to elevate!
+exit /b %errorlevel%
+
+:IsElevated
+:: You are elevated here. Do admin stuff.
+REG ADD "HKEY_CURRENT_USER\SOFTWARE\Chromium\NativeMessagingHosts\org.keepasshelper.extension" /v "" /t REG_SZ /d "{{ .chezmoi.homeDir }}\AppData\Local\KeePassNatMsg\kph_chromium.json" /f
+REG ADD "HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\org.keepasshelper.extension" /v "" /t REG_SZ /d "{{ .chezmoi.homeDir }}\AppData\Local\KeePassNatMsg\kph_firefox.json" /f
+{{ end }}

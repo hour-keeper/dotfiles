@@ -1,0 +1,10 @@
+{{ if eq .chezmoi.os "windows" }}
+["AppData/Roaming/plum"]
+    type = "git-repo"
+    url = "https://github.com/rime/plum.git"
+{{ end }}
+{{ if eq .chezmoi.os "android" }}
+["plum"]
+    type = "git-repo"
+    url = "https://github.com/rime/plum.git"
+{{ end }}

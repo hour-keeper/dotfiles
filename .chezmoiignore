@@ -1,0 +1,21 @@
+README.md
+{{ if ne .chezmoi.os "linux" }}
+.config/*
+!.config/emacs-rime
+.local
+.profile
+.gnupg
+.mozilla
+{{ end }}
+{{ if ne .chezmoi.os "windows" }}
+AppData
+.zimrc
+.bashrc
+{{ else }}
+.zshenv
+{{ end }}
+{{ if ne .chezmoi.os "android" }}
+rime
+{{ else }}
+!.config/topgrade.toml
+{{ end }}

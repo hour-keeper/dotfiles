@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.os "windows" }}
+@echo off
+rem rime hash: {{ includeTemplate "rime" | sha256sum }}
+copy "%CHEZMOI_SOURCE_DIR%\.chezmoitemplates\rime" "%APPDATA%\Rime\default.custom.yaml"
+exit /b 0
+{{ end }}

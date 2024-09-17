@@ -1,0 +1,9 @@
+{
+  "description": "KeePassHelper integration with native messaging support",
+  "type": "stdio",
+  "name": "org.keepasshelper.extension",
+  "path": "{{ .chezmoi.homeDir }}/.keepassnatmsg/run-proxy.sh",
+  "allowed_origins": [
+    "chrome-extension://jgnfghanfbjmimbdmnjfofnbcgpkbegj/"
+  ]
+}
