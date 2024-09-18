@@ -40,7 +40,6 @@
 	helper = 
 	helper = !{{ .helper }} auth git-credential
 [credential]
-	helper = manager
-{{ if eq .chezmoi.os "linux"  }}
+	helper = manager{{ if eq .chezmoi.os "linux"  }}
 	credentialStore = secretservice
 {{ end  }}
