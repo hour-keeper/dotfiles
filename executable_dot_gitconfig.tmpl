@@ -35,10 +35,10 @@
 	autoSetupRemote = true
 [credential "https://github.com"]
 	helper = 
-	helper = {{ .helper }}
+	helper = {{ .helper }} auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = {{ .helper }}
+	helper = {{ .helper }} auth git-credential
 [credential]
 	helper = manager
 {{ if eq .chezmoi.os "linux"  }}

@@ -1,0 +1,15 @@
+{{- $recipient := promptStringOnce . "recipient" "GPG recipient" -}}
+{{- $signingkey := promptStringOnce . "signingkey" "GPG signingkey" -}}
+{{- $helper := promptStringOnce . "helper" "Gh helper absolute path" -}}
+{{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $name := promptStringOnce . "name" "Git username" -}}
+encryption = "gpg"
+[gpg]
+    recipient = {{ $recipient | quote }}
+[data]
+    recipient = {{ $recipient | quote }}
+    signingkey = {{ $signingkey | quote }}
+    helper = {{ $helper | quote }}
+	email = {{ $email | quote }}
+	name = {{ $name | quote }}
+
