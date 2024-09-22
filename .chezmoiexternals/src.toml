@@ -5,4 +5,4 @@
 {{ end }}
 ["src/vim-init"]
     type = "git-repo"
-    url = "https://github.com/skywind3000/vim-init.git"
+    url = "https://github.com/hour-keeper/vim-init.git"
