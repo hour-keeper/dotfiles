@@ -9,7 +9,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["emacs", "vim", "containers", "pip3", "winget", "chocolatey", "bun", "clam_av_db"]
+disable = ["emacs", "vim", "containers", "pip3", "winget", "chocolatey", "bun", "clam_av_db"{{ if eq .chezmoi.os "android" }}, "pyenv"{{ end }}]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
