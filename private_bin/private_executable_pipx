@@ -1,2 +1,2 @@
 #!/data/data/com.termux/files/usr/bin/sh
-exec python ~/.local/lib/pipx.pyz "$@"
+python ~/.local/lib/pipx.pyz "$@"
