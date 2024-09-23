@@ -16,8 +16,7 @@ AppData
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
 rime
-bin/batman
-bin/termux-file-editor
+bin
 {{ else }}
 !.config/topgrade.toml
 {{ end }}
