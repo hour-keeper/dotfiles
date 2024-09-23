@@ -62,7 +62,8 @@ no_self_update = true
 # Additional git repositories to pull
 repos = [
     "~/src/*/",
-	"~/.emacs.d"
+	"~/.emacs.d",
+	"~/.pyenv"
 ]
 
 # Don't pull the predefined git repos

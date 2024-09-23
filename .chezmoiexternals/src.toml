@@ -1,8 +1,0 @@
-{{ if eq .chezmoi.os "windows" }}
-["src/git-extras"]
-    type = "git-repo"
-    url = "https://github.com/tj/git-extras.git"
-{{ end }}
-["src/vim-init"]
-    type = "git-repo"
-    url = "https://github.com/hour-keeper/vim-init.git"
