@@ -53,5 +53,4 @@ export PYENV_ROOT=$HOME/.pyenv
 [[ -d $PYENV_ROOT/bin ]] && export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(register-python-argcomplete --shell zsh pipx)"
 eval "$(pyenv init -)"{{ end }}{{ if eq .chezmoi.os "android"}}
-alias pipx="pipx.pyz"
 alias rish="~/rish"{{ end }}

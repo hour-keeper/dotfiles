@@ -1,5 +1,5 @@
 {{ if eq .chezmoi.os "android" }}
-["bin/pipx.pyz"]
+["bin/pipx"]
     type = "file"
 	executable = true
     url = "https://github.com/pypa/pipx/releases/latest/download/pipx.pyz"
