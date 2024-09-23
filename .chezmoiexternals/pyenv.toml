@@ -2,4 +2,8 @@
 [".pyenv"]
     type = "git-repo"
     url = "https://github.com/pyenv-win/pyenv-win.git"
+{{ else }}
+[".pyenv"]
+    type = "git-repo"
+    url = "https://github.com/pyenv/pyenv.git"
 {{ end }}
