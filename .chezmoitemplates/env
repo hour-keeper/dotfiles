@@ -49,6 +49,7 @@ export EDITOR='emacs -nw'
 gsudo() { WSLENV=WSL_DISTRO_NAME:USER:$WSLENV MSYS_NO_PATHCONV=1 gsudo.exe "$@"; }
 alias sudo=gsudo
 alias pacman=pacboy{{ else}}
+alias topgrade='topgrade --keep'
 export PYENV_ROOT=$HOME/.pyenv
 [[ -d $PYENV_ROOT/bin ]] && export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(register-python-argcomplete --shell zsh pipx)"
