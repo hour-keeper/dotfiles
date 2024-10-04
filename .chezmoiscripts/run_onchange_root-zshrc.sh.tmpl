@@ -38,5 +38,5 @@ export EDITOR=vim
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 EOF
 
-cp {{ .chezmoi.destDir }}/.p10k.zsh $HOME/.p10k.zsh
+cp {{ .chezmoi.config.destDir }}/.p10k.zsh $HOME/.p10k.zsh
 {{ end }}
