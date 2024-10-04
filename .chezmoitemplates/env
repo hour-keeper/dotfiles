@@ -56,8 +56,8 @@ alias pacman=pacboy
 alias topgrade='topgrade --keep'
 export PYENV_ROOT=$HOME/.pyenv
 [[ -d $PYENV_ROOT/bin ]] && export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(register-python-argcomplete --shell zsh pipx)"
-eval "$(pyenv init -)"
+[[ "$EUID" -ne 0 ]] && eval "$(register-python-argcomplete --shell zsh pipx)"
+[[ "$EUID" -ne 0 ]] && eval "$(pyenv init -)"
 {{- end }}
 {{- if eq .chezmoi.os "android"}}
 alias rish="~/rish"
