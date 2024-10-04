@@ -38,5 +38,6 @@ export EDITOR=vim
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 EOF
 
+# .p10k.zsh hash: {{ include "dot_p10k.zsh" | sha256sum }}
 cp {{ .chezmoi.config.destDir }}/.p10k.zsh $HOME/.p10k.zsh
 {{ end }}
