@@ -2,10 +2,10 @@
 	email = {{ .email }}
 	name = {{ .name }}
 	signingkey = {{ .signingkey }}
-{{ if eq .chezmoi.os "android"  }}
+{{- if eq .chezmoi.os "android"  }}
 [gpg]
     program = okc-gpg
-{{ end  }}
+{{- end  }}
 [commit]
 	gpgsign = true
 [diff]
@@ -40,6 +40,7 @@
 	helper = 
 	helper = !{{ .helper }} auth git-credential
 [credential]
-	helper = manager{{ if eq .chezmoi.os "linux"  }}
+	helper = manager
+{{- if eq .chezmoi.os "linux"  }}
 	credentialStore = secretservice
-{{ end  }}
+{{- end }}

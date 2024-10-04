@@ -1,5 +1,5 @@
-{{ if eq .chezmoi.os "windows" }}
-{{ template "zsh_windows" . }}
-{{ else }}
-{{ template "zsh_linux" . }}
-{{ end }}
+{{ if eq .chezmoi.os "windows" -}}
+{{ template "zsh_windows" . -}}
+{{ else -}}
+{{ template "zsh_linux" . -}}
+{{ end -}}
