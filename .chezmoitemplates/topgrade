@@ -9,7 +9,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["emacs", "vim", "containers", "pip3", "winget", "chocolatey", "bun", "clam_av_db"{{if ne .chezmoi.os "windows" }}, "pyenv"{{ end }}]
+disable = ["emacs", "vim", "containers", "pip3", "winget", "chocolatey", "bun", "clam_av_db"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -62,8 +62,7 @@ no_self_update = true
 # Additional git repositories to pull
 repos = [
     "~/src/*/",
-	"~/.emacs.d",
-	"~/.pyenv"
+	"~/.emacs.d"
 ]
 
 # Don't pull the predefined git repos
