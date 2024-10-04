@@ -45,8 +45,8 @@ export PATH=$PATH:$HOME/.rd/bin
 alias mv='advmv -g'
 alias cp='advcp -g'
 alias rate-all-mirrors='rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && rate-mirrors archlinuxcn | sudo tee /etc/pacman.d/archlinuxcn-mirrorlist && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist'
-[[ "$EUID" -ne 0 ]] && eval "$(register-python-argcomplete --shell zsh pipx)"
-[[ "$EUID" -ne 0 ]] && eval "$(pyenv init -)"
+eval "$(pyenv init -)"
+eval "$(jenv init -)"
 {{- end }}
 {{- if eq .chezmoi.os "windows" }}
 export SSH_AUTH_SOCK="$HOME/AppData/Local/Temp/cygwin"
