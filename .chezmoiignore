@@ -13,6 +13,7 @@ AppData
 .bashrc
 {{ else }}
 .zshenv
+.ssh/s
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
 rime
