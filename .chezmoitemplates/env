@@ -45,7 +45,7 @@ function proxy_on() {
     echo -e "proxy on"
 	if [[ -n "$ZSH_VERSION" ]]; then
 		exec proxychains4 -q zsh
-	elif [[ -n "$BASH_VERSION"]]; then
+	elif [[ -n "$BASH_VERSION" ]]; then
 		exec proxychains4 -q bash
 	fi
 }
@@ -53,7 +53,7 @@ function proxy_off() {
     echo -e "proxy off"
 	if [[ -n "$ZSH_VERSION" ]]; then
 		exec zsh
-	elif [[ -n "$BASH_VERSION"]]; then
+	elif [[ -n "$BASH_VERSION" ]]; then
 		exec bash
 	fi
 }
