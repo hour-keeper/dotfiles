@@ -40,6 +40,25 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
+# proxychains
+function proxy_on() {
+    echo -e "proxy on"
+	case "$0" in
+		-zsh )
+			exec proxychains4 -q zsh ;;
+		bash )
+			exec proxychains4 -q bash ;;
+	esac
+}
+function proxy_off() {
+    echo -e "proxy off"
+	case "$0" in
+		-zsh )
+			exec zsh ;;
+		bash )
+			exec bash ;;
+	esac
+}
 {{- if eq .chezmoi.os "linux"}}
 export PATH=$PATH:$HOME/.rd/bin
 alias mv='advmv -g'
