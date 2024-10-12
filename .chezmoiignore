@@ -11,7 +11,10 @@ README.md
 AppData
 .zimrc
 .bashrc
+.config/.env
 {{ else }}
+!.config/.env
+.config/p
 .zshenv
 .ssh/s
 {{ end }}
