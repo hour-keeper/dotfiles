@@ -43,21 +43,19 @@ rga-fzf() {
 # proxychains
 function proxy_on() {
     echo -e "proxy on"
-	case "$0" in
-		-zsh )
-			exec proxychains4 -q zsh ;;
-		bash )
-			exec proxychains4 -q bash ;;
-	esac
+	if [[ -n "$ZSH_VERSION" ]]; then
+		exec proxychains4 -q zsh
+	elif [[ -n "$BASH_VERSION"]]; then
+		exec proxychains4 -q bash
+	fi
 }
 function proxy_off() {
     echo -e "proxy off"
-	case "$0" in
-		-zsh )
-			exec zsh ;;
-		bash )
-			exec bash ;;
-	esac
+	if [[ -n "$ZSH_VERSION" ]]; then
+		exec zsh
+	elif [[ -n "$BASH_VERSION"]]; then
+		exec bash
+	fi
 }
 {{- if eq .chezmoi.os "linux"}}
 export PATH=$PATH:$HOME/.rd/bin
