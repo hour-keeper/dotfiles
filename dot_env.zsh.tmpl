@@ -1,1 +1,11 @@
+# proxychains
+{{ if eq .chezmoi.os "windows" }}proxychains{{ else }}proxychains4{{ end }}
+function proxy_on() {
+    echo -e "proxy on"
+	exec {{ if eq .chezmoi.os "windows" }}proxychains{{ else }}proxychains4{{ end }} -q zsh
+}
+function proxy_off() {
+    echo -e "proxy off"
+	exec zsh
+}
 {{ template "env" . -}}

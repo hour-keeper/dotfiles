@@ -40,24 +40,6 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
-# proxychains
-proxy_bin={{ if eq .chezmoi.os "windows" }}proxychains{{ else }}proxychains4{{ end }}
-function proxy_on() {
-    echo -e "proxy on"
-	if [[ -n "$ZSH_VERSION" ]]; then
-		exec "$proxy_bin" -q zsh
-	elif [[ -n "$BASH_VERSION" ]]; then
-		exec "$proxy_bin" -q bash
-	fi
-}
-function proxy_off() {
-    echo -e "proxy off"
-	if [[ -n "$ZSH_VERSION" ]]; then
-		exec zsh
-	elif [[ -n "$BASH_VERSION" ]]; then
-		exec bash
-	fi
-}
 {{- if eq .chezmoi.os "linux"}}
 export PATH=$PATH:$HOME/.rd/bin
 alias mv='advmv -g'
