@@ -3,7 +3,7 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/go/bin
 alias em='emacs -nw'
 alias ls='eza --icons'
-alias lsa='ls -a -l -F'
+alias lsa='ls -alF always'
 export GPG_TTY=$(tty)
 #bat https://github.com/sharkdp/bat
 export BAT_STYLE=plain
