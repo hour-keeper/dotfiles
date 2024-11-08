@@ -3,13 +3,6 @@ patch:
     - "Control+grave"
     - "Control+Shift+grave"
   key_binder/bindings:
-    - {accept: "Control+Shift+space", toggle: ascii_mode, when: always}
     - {accept: comma, send: 2, when: has_menu} #逗号次选
-  ascii_composer/switch_key:
-    Caps_Lock: noop
-    Control_L: noop
-    Control_R: noop
-    Shift_L: noop
-    Shift_R: noop
   schema_list:
     - schema: flypy
