@@ -2,10 +2,6 @@
 	email = {{ .email }}
 	name = {{ .name }}
 	signingkey = {{ .signingkey }}
-{{- if eq .chezmoi.os "android"  }}
-[gpg]
-    program = okc-gpg
-{{- end  }}
 [commit]
 	gpgsign = true
 [diff]
