@@ -1,0 +1,1 @@
+pinentry-program {{ if eq .chezmoi.os "linux" }}{{ lookPath "pinentry-gnome3" }}{{ else }}{{ lookPath "pinentry-tty" }}{{ end }}

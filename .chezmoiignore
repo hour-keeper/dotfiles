@@ -4,7 +4,6 @@ README.md
 !.config/emacs-rime
 .local
 .profile
-.gnupg
 .mozilla
 {{ end }}
 {{ if ne .chezmoi.os "windows" }}
@@ -13,6 +12,7 @@ AppData
 .bashrc
 {{ else }}
 .zshenv
+.gnupg
 .ssh/s
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
