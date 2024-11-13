@@ -17,6 +17,7 @@ AppData
 {{ end }}
 {{ if ne .chezmoi.os "android" }}
 rime
+bin
 {{ else }}
 !.config/topgrade.toml
 {{ end }}
