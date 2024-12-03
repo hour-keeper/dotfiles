@@ -37,7 +37,3 @@ export EDITOR=vim
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 EOF
-
-# .p10k.zsh hash: {{ include "dot_p10k.zsh" | sha256sum }}
-cp {{ .chezmoi.sourceDir }}/dot_p10k.zsh $HOME/.p10k.zsh
-{{ end }}
