@@ -4,8 +4,10 @@ create_default_packages:
   - ipython
   - numpy
   - scipy
+{{- if ne .chezmoi.os "windows" }}
   - libgcc-ng
   - mpich
+{{- end }}
   - rust
 show_channel_urls: true
 default_channels:
