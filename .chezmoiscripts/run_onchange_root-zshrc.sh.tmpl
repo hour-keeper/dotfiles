@@ -1,8 +1,8 @@
 {{ if ne .chezmoi.os "windows" -}}
 #!{{ lookPath "bash" }}
-if [ "$EUID" -ne 0 ]
+if [[ "$EUID" -ne 0 ]]
 then
-    exec sudo "$0" "$@"
+    exec sudo -s "$0" "$@"
 fi
 
 cat <<'EOF' > $HOME/.zshrc
@@ -26,4 +26,5 @@ export EDITOR=vim
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 EOF
+sudo -k
 {{ end }}
