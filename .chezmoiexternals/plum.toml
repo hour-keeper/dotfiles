@@ -7,3 +7,4 @@
 ["appdata/roaming/plum"]
     type = "git-repo"
     url = "https://github.com/rime/plum.git"
+{{ end }}
