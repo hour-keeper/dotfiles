@@ -15,7 +15,7 @@
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["emacs", "vim", "containers", "pip3", "winget", "chocolatey", "bun", "clam_av_db", "scoop"]
+disable = ["emacs", "vim", "containers", "pip3", "winget", "chocolatey", "bun", "clam_av_db", "scoop"{{if eq .chezmoi.os "windows"}}, "system"{{ end }}]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
