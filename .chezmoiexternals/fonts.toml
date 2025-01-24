@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.os "linux" }}
+[".config/fontconfig/fonts.conf"]
+    type = "file"
+    url = "https://gist.githubusercontent.com/rydesun/cbeab3a6d7b9ccf3c47d890c7caa3a11/raw/fonts.conf"
+    refreshPeriod = "168h"
+{{ end }}
