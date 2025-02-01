@@ -1,4 +1,4 @@
-auto_activate_base: false
+auto_activate_base: {{ if ne .chezmoi.os "windows" }}false{{ else }}true{{ end }}
 create_default_packages:
   - pip
   - ipython
